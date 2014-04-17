@@ -31,21 +31,22 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingUpTheProjectFrm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.testingPage = new System.Windows.Forms.TabPage();
-            this.modelPage = new System.Windows.Forms.TabPage();
-            this.rpsecTestingChk = new System.Windows.Forms.CheckBox();
-            this.rspecDescLbl = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.capybaraChk = new System.Windows.Forms.CheckBox();
-            this.capybaraDescLbl = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.modelNameTxt1 = new System.Windows.Forms.TextBox();
-            this.modelNameLbl1 = new System.Windows.Forms.Label();
-            this.attributesLbl1 = new System.Windows.Forms.Label();
-            this.attributeNameTxt1 = new System.Windows.Forms.TextBox();
+            this.capybaraDescLbl = new System.Windows.Forms.Label();
+            this.capybaraChk = new System.Windows.Forms.CheckBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.rspecDescLbl = new System.Windows.Forms.Label();
+            this.rpsecTestingChk = new System.Windows.Forms.CheckBox();
+            this.modelPage = new System.Windows.Forms.TabPage();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.attributeNameTxt1 = new System.Windows.Forms.TextBox();
+            this.attributesLbl1 = new System.Windows.Forms.Label();
+            this.modelNameLbl1 = new System.Windows.Forms.Label();
+            this.modelNameTxt1 = new System.Windows.Forms.TextBox();
             this.controllerPage = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.controllerLabel1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.generateBtn = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.testingPage.SuspendLayout();
             this.modelPage.SuspendLayout();
@@ -80,6 +81,67 @@
             this.testingPage.Text = "Testing";
             this.testingPage.UseVisualStyleBackColor = true;
             // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(170, 151);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(184, 13);
+            this.linkLabel2.TabIndex = 6;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "https://github.com/jnicklas/capybara";
+            // 
+            // capybaraDescLbl
+            // 
+            this.capybaraDescLbl.AutoSize = true;
+            this.capybaraDescLbl.Location = new System.Drawing.Point(13, 138);
+            this.capybaraDescLbl.Name = "capybaraDescLbl";
+            this.capybaraDescLbl.Size = new System.Drawing.Size(340, 26);
+            this.capybaraDescLbl.TabIndex = 5;
+            this.capybaraDescLbl.Text = "Capybara helps you test web applications by simulating how a real user\r\nwould int" +
+                "eract with your app.";
+            // 
+            // capybaraChk
+            // 
+            this.capybaraChk.AutoSize = true;
+            this.capybaraChk.Location = new System.Drawing.Point(16, 118);
+            this.capybaraChk.Name = "capybaraChk";
+            this.capybaraChk.Size = new System.Drawing.Size(175, 17);
+            this.capybaraChk.TabIndex = 4;
+            this.capybaraChk.Text = "Use Capybara for feature specs";
+            this.capybaraChk.UseVisualStyleBackColor = true;
+            this.capybaraChk.CheckedChanged += new System.EventHandler(this.capybaraChk_CheckedChanged);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(170, 91);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(157, 13);
+            this.linkLabel1.TabIndex = 3;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "https://github.com/rspec/rspec";
+            // 
+            // rspecDescLbl
+            // 
+            this.rspecDescLbl.AutoSize = true;
+            this.rspecDescLbl.Location = new System.Drawing.Point(13, 39);
+            this.rspecDescLbl.Name = "rspecDescLbl";
+            this.rspecDescLbl.Size = new System.Drawing.Size(382, 65);
+            this.rspecDescLbl.TabIndex = 2;
+            this.rspecDescLbl.Text = resources.GetString("rspecDescLbl.Text");
+            // 
+            // rpsecTestingChk
+            // 
+            this.rpsecTestingChk.AutoSize = true;
+            this.rpsecTestingChk.Location = new System.Drawing.Point(16, 19);
+            this.rpsecTestingChk.Name = "rpsecTestingChk";
+            this.rpsecTestingChk.Size = new System.Drawing.Size(79, 17);
+            this.rpsecTestingChk.TabIndex = 1;
+            this.rpsecTestingChk.Text = "Use Rspec";
+            this.rpsecTestingChk.UseVisualStyleBackColor = true;
+            this.rpsecTestingChk.CheckedChanged += new System.EventHandler(this.rpsecTestingChk_CheckedChanged);
+            // 
             // modelPage
             // 
             this.modelPage.Controls.Add(this.comboBox1);
@@ -95,99 +157,10 @@
             this.modelPage.Text = "Models";
             this.modelPage.UseVisualStyleBackColor = true;
             // 
-            // rpsecTestingChk
-            // 
-            this.rpsecTestingChk.AutoSize = true;
-            this.rpsecTestingChk.Location = new System.Drawing.Point(16, 19);
-            this.rpsecTestingChk.Name = "rpsecTestingChk";
-            this.rpsecTestingChk.Size = new System.Drawing.Size(79, 17);
-            this.rpsecTestingChk.TabIndex = 1;
-            this.rpsecTestingChk.Text = "Use Rspec";
-            this.rpsecTestingChk.UseVisualStyleBackColor = true;
-            // 
-            // rspecDescLbl
-            // 
-            this.rspecDescLbl.AutoSize = true;
-            this.rspecDescLbl.Location = new System.Drawing.Point(13, 39);
-            this.rspecDescLbl.Name = "rspecDescLbl";
-            this.rspecDescLbl.Size = new System.Drawing.Size(382, 65);
-            this.rspecDescLbl.TabIndex = 2;
-            this.rspecDescLbl.Text = resources.GetString("rspecDescLbl.Text");
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(170, 91);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(157, 13);
-            this.linkLabel1.TabIndex = 3;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "https://github.com/rspec/rspec";
-            // 
-            // capybaraChk
-            // 
-            this.capybaraChk.AutoSize = true;
-            this.capybaraChk.Location = new System.Drawing.Point(16, 118);
-            this.capybaraChk.Name = "capybaraChk";
-            this.capybaraChk.Size = new System.Drawing.Size(175, 17);
-            this.capybaraChk.TabIndex = 4;
-            this.capybaraChk.Text = "Use Capybara for feature specs";
-            this.capybaraChk.UseVisualStyleBackColor = true;
-            // 
-            // capybaraDescLbl
-            // 
-            this.capybaraDescLbl.AutoSize = true;
-            this.capybaraDescLbl.Location = new System.Drawing.Point(13, 138);
-            this.capybaraDescLbl.Name = "capybaraDescLbl";
-            this.capybaraDescLbl.Size = new System.Drawing.Size(340, 26);
-            this.capybaraDescLbl.TabIndex = 5;
-            this.capybaraDescLbl.Text = "Capybara helps you test web applications by simulating how a real user\r\nwould int" +
-                "eract with your app.";
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(170, 151);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(184, 13);
-            this.linkLabel2.TabIndex = 6;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "https://github.com/jnicklas/capybara";
-            // 
-            // modelNameTxt1
-            // 
-            this.modelNameTxt1.Location = new System.Drawing.Point(8, 29);
-            this.modelNameTxt1.Name = "modelNameTxt1";
-            this.modelNameTxt1.Size = new System.Drawing.Size(152, 20);
-            this.modelNameTxt1.TabIndex = 0;
-            // 
-            // modelNameLbl1
-            // 
-            this.modelNameLbl1.AutoSize = true;
-            this.modelNameLbl1.Location = new System.Drawing.Point(8, 13);
-            this.modelNameLbl1.Name = "modelNameLbl1";
-            this.modelNameLbl1.Size = new System.Drawing.Size(65, 13);
-            this.modelNameLbl1.TabIndex = 1;
-            this.modelNameLbl1.Text = "Model name";
-            // 
-            // attributesLbl1
-            // 
-            this.attributesLbl1.AutoSize = true;
-            this.attributesLbl1.Location = new System.Drawing.Point(176, 13);
-            this.attributesLbl1.Name = "attributesLbl1";
-            this.attributesLbl1.Size = new System.Drawing.Size(51, 13);
-            this.attributesLbl1.TabIndex = 2;
-            this.attributesLbl1.Text = "Attributes";
-            // 
-            // attributeNameTxt1
-            // 
-            this.attributeNameTxt1.Location = new System.Drawing.Point(179, 29);
-            this.attributeNameTxt1.Name = "attributeNameTxt1";
-            this.attributeNameTxt1.Size = new System.Drawing.Size(120, 20);
-            this.attributeNameTxt1.TabIndex = 3;
-            // 
             // comboBox1
             // 
+            this.comboBox1.AllowDrop = true;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "string",
@@ -200,7 +173,38 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(94, 21);
             this.comboBox1.TabIndex = 4;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // attributeNameTxt1
+            // 
+            this.attributeNameTxt1.Location = new System.Drawing.Point(179, 29);
+            this.attributeNameTxt1.Name = "attributeNameTxt1";
+            this.attributeNameTxt1.Size = new System.Drawing.Size(120, 20);
+            this.attributeNameTxt1.TabIndex = 3;
+            // 
+            // attributesLbl1
+            // 
+            this.attributesLbl1.AutoSize = true;
+            this.attributesLbl1.Location = new System.Drawing.Point(176, 13);
+            this.attributesLbl1.Name = "attributesLbl1";
+            this.attributesLbl1.Size = new System.Drawing.Size(51, 13);
+            this.attributesLbl1.TabIndex = 2;
+            this.attributesLbl1.Text = "Attributes";
+            // 
+            // modelNameLbl1
+            // 
+            this.modelNameLbl1.AutoSize = true;
+            this.modelNameLbl1.Location = new System.Drawing.Point(8, 13);
+            this.modelNameLbl1.Name = "modelNameLbl1";
+            this.modelNameLbl1.Size = new System.Drawing.Size(65, 13);
+            this.modelNameLbl1.TabIndex = 1;
+            this.modelNameLbl1.Text = "Model name";
+            // 
+            // modelNameTxt1
+            // 
+            this.modelNameTxt1.Location = new System.Drawing.Point(8, 29);
+            this.modelNameTxt1.Name = "modelNameTxt1";
+            this.modelNameTxt1.Size = new System.Drawing.Size(152, 20);
+            this.modelNameTxt1.TabIndex = 0;
             // 
             // controllerPage
             // 
@@ -213,13 +217,6 @@
             this.controllerPage.Text = "Controllers";
             this.controllerPage.UseVisualStyleBackColor = true;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(8, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(225, 20);
-            this.textBox1.TabIndex = 0;
-            // 
             // controllerLabel1
             // 
             this.controllerLabel1.AutoSize = true;
@@ -229,11 +226,29 @@
             this.controllerLabel1.TabIndex = 1;
             this.controllerLabel1.Text = "Controller name";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(8, 37);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(225, 20);
+            this.textBox1.TabIndex = 0;
+            // 
+            // generateBtn
+            // 
+            this.generateBtn.Location = new System.Drawing.Point(301, 359);
+            this.generateBtn.Name = "generateBtn";
+            this.generateBtn.Size = new System.Drawing.Size(102, 24);
+            this.generateBtn.TabIndex = 1;
+            this.generateBtn.Text = "Generate project";
+            this.generateBtn.UseVisualStyleBackColor = true;
+            this.generateBtn.Click += new System.EventHandler(this.generateBtn_Click);
+            // 
             // SettingUpTheProjectFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(415, 412);
+            this.Controls.Add(this.generateBtn);
             this.Controls.Add(this.tabControl1);
             this.Name = "SettingUpTheProjectFrm";
             this.Text = "Setting up the project";
@@ -267,5 +282,6 @@
         private System.Windows.Forms.TabPage controllerPage;
         private System.Windows.Forms.Label controllerLabel1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button generateBtn;
     }
 }
