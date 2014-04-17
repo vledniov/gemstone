@@ -1,0 +1,8 @@
+C:\Teza\railsFTW\railsFTW\railsFTW\bin\Debug\railsFTW.exe
+C:\Teza\railsFTW\railsFTW\railsFTW\bin\Debug\railsFTW.pdb
+C:\Teza\railsFTW\railsFTW\railsFTW\obj\x86\Debug\railsFTW.welcomeScreenFrm.resources
+C:\Teza\railsFTW\railsFTW\railsFTW\obj\x86\Debug\railsFTW.Properties.Resources.resources
+C:\Teza\railsFTW\railsFTW\railsFTW\obj\x86\Debug\railsFTW.SettingUpTheProjectFrm.resources
+C:\Teza\railsFTW\railsFTW\railsFTW\obj\x86\Debug\railsFTW.csproj.GenerateResource.Cache
+C:\Teza\railsFTW\railsFTW\railsFTW\obj\x86\Debug\railsFTW.exe
+C:\Teza\railsFTW\railsFTW\railsFTW\obj\x86\Debug\railsFTW.pdb
