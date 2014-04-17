@@ -45,7 +45,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.controllerPage = new System.Windows.Forms.TabPage();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.controllerLabel1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.testingPage.SuspendLayout();
             this.modelPage.SuspendLayout();
@@ -204,7 +204,7 @@
             // 
             // controllerPage
             // 
-            this.controllerPage.Controls.Add(this.label1);
+            this.controllerPage.Controls.Add(this.controllerLabel1);
             this.controllerPage.Controls.Add(this.textBox1);
             this.controllerPage.Location = new System.Drawing.Point(4, 25);
             this.controllerPage.Name = "controllerPage";
@@ -220,14 +220,14 @@
             this.textBox1.Size = new System.Drawing.Size(225, 20);
             this.textBox1.TabIndex = 0;
             // 
-            // label1
+            // controllerLabel1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Controller name";
+            this.controllerLabel1.AutoSize = true;
+            this.controllerLabel1.Location = new System.Drawing.Point(8, 21);
+            this.controllerLabel1.Name = "controllerLabel1";
+            this.controllerLabel1.Size = new System.Drawing.Size(80, 13);
+            this.controllerLabel1.TabIndex = 1;
+            this.controllerLabel1.Text = "Controller name";
             // 
             // SettingUpTheProjectFrm
             // 
@@ -265,7 +265,7 @@
         private System.Windows.Forms.Label modelNameLbl1;
         private System.Windows.Forms.TextBox modelNameTxt1;
         private System.Windows.Forms.TabPage controllerPage;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label controllerLabel1;
         private System.Windows.Forms.TextBox textBox1;
     }
 }
