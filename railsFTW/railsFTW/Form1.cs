@@ -18,6 +18,9 @@ namespace railsFTW
 
         private void newProjectBtn_Click(object sender, EventArgs e)
         {
+            var project_folder = new FolderBrowserDialog();
+            project_folder.ShowDialog();
+            Globals.setDirectory(project_folder.SelectedPath);
             var new_project = new SettingUpTheProjectFrm();
             new_project.Show();
         }
