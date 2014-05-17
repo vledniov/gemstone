@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingUpTheProjectFrm));
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.mainTabControl = new System.Windows.Forms.TabControl();
             this.testingPage = new System.Windows.Forms.TabPage();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.capybaraDescLbl = new System.Windows.Forms.Label();
@@ -38,32 +38,34 @@
             this.rspecDescLbl = new System.Windows.Forms.Label();
             this.rpsecTestingChk = new System.Windows.Forms.CheckBox();
             this.modelPage = new System.Windows.Forms.TabPage();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.attributeNameTxt1 = new System.Windows.Forms.TextBox();
+            this.modelGenerateBtn = new System.Windows.Forms.Button();
+            this.attrTypeBox0 = new System.Windows.Forms.ComboBox();
+            this.attributeNameTxt0 = new System.Windows.Forms.TextBox();
             this.attributesLbl1 = new System.Windows.Forms.Label();
             this.modelNameLbl1 = new System.Windows.Forms.Label();
-            this.modelNameTxt1 = new System.Windows.Forms.TextBox();
+            this.modelNameTxt0 = new System.Windows.Forms.TextBox();
             this.controllerPage = new System.Windows.Forms.TabPage();
+            this.controllerGenerateBtn = new System.Windows.Forms.Button();
             this.controllerLabel1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.controllerBox0 = new System.Windows.Forms.TextBox();
             this.generateBtn = new System.Windows.Forms.Button();
-            this.tabControl1.SuspendLayout();
+            this.mainTabControl.SuspendLayout();
             this.testingPage.SuspendLayout();
             this.modelPage.SuspendLayout();
             this.controllerPage.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // mainTabControl
             // 
-            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.tabControl1.Controls.Add(this.testingPage);
-            this.tabControl1.Controls.Add(this.modelPage);
-            this.tabControl1.Controls.Add(this.controllerPage);
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(417, 332);
-            this.tabControl1.TabIndex = 0;
+            this.mainTabControl.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.mainTabControl.Controls.Add(this.testingPage);
+            this.mainTabControl.Controls.Add(this.modelPage);
+            this.mainTabControl.Controls.Add(this.controllerPage);
+            this.mainTabControl.Location = new System.Drawing.Point(0, 0);
+            this.mainTabControl.Name = "mainTabControl";
+            this.mainTabControl.SelectedIndex = 0;
+            this.mainTabControl.Size = new System.Drawing.Size(417, 332);
+            this.mainTabControl.TabIndex = 0;
             // 
             // testingPage
             // 
@@ -144,11 +146,12 @@
             // 
             // modelPage
             // 
-            this.modelPage.Controls.Add(this.comboBox1);
-            this.modelPage.Controls.Add(this.attributeNameTxt1);
+            this.modelPage.Controls.Add(this.modelGenerateBtn);
+            this.modelPage.Controls.Add(this.attrTypeBox0);
+            this.modelPage.Controls.Add(this.attributeNameTxt0);
             this.modelPage.Controls.Add(this.attributesLbl1);
             this.modelPage.Controls.Add(this.modelNameLbl1);
-            this.modelPage.Controls.Add(this.modelNameTxt1);
+            this.modelPage.Controls.Add(this.modelNameTxt0);
             this.modelPage.Location = new System.Drawing.Point(4, 25);
             this.modelPage.Name = "modelPage";
             this.modelPage.Padding = new System.Windows.Forms.Padding(3);
@@ -157,34 +160,44 @@
             this.modelPage.Text = "Models";
             this.modelPage.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // modelGenerateBtn
             // 
-            this.comboBox1.AllowDrop = true;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.modelGenerateBtn.Location = new System.Drawing.Point(309, 18);
+            this.modelGenerateBtn.Name = "modelGenerateBtn";
+            this.modelGenerateBtn.Size = new System.Drawing.Size(94, 23);
+            this.modelGenerateBtn.TabIndex = 5;
+            this.modelGenerateBtn.Text = "Generate new";
+            this.modelGenerateBtn.UseVisualStyleBackColor = true;
+            this.modelGenerateBtn.Click += new System.EventHandler(this.modelGenerateBtn_Click);
+            // 
+            // attrTypeBox0
+            // 
+            this.attrTypeBox0.AllowDrop = true;
+            this.attrTypeBox0.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.attrTypeBox0.FormattingEnabled = true;
+            this.attrTypeBox0.Items.AddRange(new object[] {
             "string",
             "text",
             "decimal",
             "integer",
             "date",
             "datetime"});
-            this.comboBox1.Location = new System.Drawing.Point(305, 28);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(94, 21);
-            this.comboBox1.TabIndex = 4;
+            this.attrTypeBox0.Location = new System.Drawing.Point(309, 53);
+            this.attrTypeBox0.Name = "attrTypeBox0";
+            this.attrTypeBox0.Size = new System.Drawing.Size(94, 21);
+            this.attrTypeBox0.TabIndex = 4;
             // 
-            // attributeNameTxt1
+            // attributeNameTxt0
             // 
-            this.attributeNameTxt1.Location = new System.Drawing.Point(179, 29);
-            this.attributeNameTxt1.Name = "attributeNameTxt1";
-            this.attributeNameTxt1.Size = new System.Drawing.Size(120, 20);
-            this.attributeNameTxt1.TabIndex = 3;
+            this.attributeNameTxt0.Location = new System.Drawing.Point(179, 54);
+            this.attributeNameTxt0.Name = "attributeNameTxt0";
+            this.attributeNameTxt0.Size = new System.Drawing.Size(120, 20);
+            this.attributeNameTxt0.TabIndex = 3;
             // 
             // attributesLbl1
             // 
             this.attributesLbl1.AutoSize = true;
-            this.attributesLbl1.Location = new System.Drawing.Point(176, 13);
+            this.attributesLbl1.Location = new System.Drawing.Point(176, 28);
             this.attributesLbl1.Name = "attributesLbl1";
             this.attributesLbl1.Size = new System.Drawing.Size(51, 13);
             this.attributesLbl1.TabIndex = 2;
@@ -193,29 +206,40 @@
             // modelNameLbl1
             // 
             this.modelNameLbl1.AutoSize = true;
-            this.modelNameLbl1.Location = new System.Drawing.Point(8, 13);
+            this.modelNameLbl1.Location = new System.Drawing.Point(8, 28);
             this.modelNameLbl1.Name = "modelNameLbl1";
             this.modelNameLbl1.Size = new System.Drawing.Size(65, 13);
             this.modelNameLbl1.TabIndex = 1;
             this.modelNameLbl1.Text = "Model name";
             // 
-            // modelNameTxt1
+            // modelNameTxt0
             // 
-            this.modelNameTxt1.Location = new System.Drawing.Point(8, 29);
-            this.modelNameTxt1.Name = "modelNameTxt1";
-            this.modelNameTxt1.Size = new System.Drawing.Size(152, 20);
-            this.modelNameTxt1.TabIndex = 0;
+            this.modelNameTxt0.Location = new System.Drawing.Point(11, 54);
+            this.modelNameTxt0.Name = "modelNameTxt0";
+            this.modelNameTxt0.Size = new System.Drawing.Size(152, 20);
+            this.modelNameTxt0.TabIndex = 0;
             // 
             // controllerPage
             // 
+            this.controllerPage.Controls.Add(this.controllerGenerateBtn);
             this.controllerPage.Controls.Add(this.controllerLabel1);
-            this.controllerPage.Controls.Add(this.textBox1);
+            this.controllerPage.Controls.Add(this.controllerBox0);
             this.controllerPage.Location = new System.Drawing.Point(4, 25);
             this.controllerPage.Name = "controllerPage";
             this.controllerPage.Size = new System.Drawing.Size(409, 303);
             this.controllerPage.TabIndex = 2;
             this.controllerPage.Text = "Controllers";
             this.controllerPage.UseVisualStyleBackColor = true;
+            // 
+            // controllerGenerateBtn
+            // 
+            this.controllerGenerateBtn.Location = new System.Drawing.Point(278, 34);
+            this.controllerGenerateBtn.Name = "controllerGenerateBtn";
+            this.controllerGenerateBtn.Size = new System.Drawing.Size(102, 23);
+            this.controllerGenerateBtn.TabIndex = 2;
+            this.controllerGenerateBtn.Text = "Generate new";
+            this.controllerGenerateBtn.UseVisualStyleBackColor = true;
+            this.controllerGenerateBtn.Click += new System.EventHandler(this.controllerGenerateBtn_Click);
             // 
             // controllerLabel1
             // 
@@ -226,16 +250,16 @@
             this.controllerLabel1.TabIndex = 1;
             this.controllerLabel1.Text = "Controller name";
             // 
-            // textBox1
+            // controllerBox0
             // 
-            this.textBox1.Location = new System.Drawing.Point(8, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(225, 20);
-            this.textBox1.TabIndex = 0;
+            this.controllerBox0.Location = new System.Drawing.Point(8, 37);
+            this.controllerBox0.Name = "controllerBox0";
+            this.controllerBox0.Size = new System.Drawing.Size(225, 20);
+            this.controllerBox0.TabIndex = 0;
             // 
             // generateBtn
             // 
-            this.generateBtn.Location = new System.Drawing.Point(301, 359);
+            this.generateBtn.Location = new System.Drawing.Point(282, 355);
             this.generateBtn.Name = "generateBtn";
             this.generateBtn.Size = new System.Drawing.Size(102, 24);
             this.generateBtn.TabIndex = 1;
@@ -249,10 +273,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(415, 412);
             this.Controls.Add(this.generateBtn);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.mainTabControl);
             this.Name = "SettingUpTheProjectFrm";
             this.Text = "Setting up the project";
-            this.tabControl1.ResumeLayout(false);
+            this.mainTabControl.ResumeLayout(false);
             this.testingPage.ResumeLayout(false);
             this.testingPage.PerformLayout();
             this.modelPage.ResumeLayout(false);
@@ -265,7 +289,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl mainTabControl;
         private System.Windows.Forms.TabPage testingPage;
         private System.Windows.Forms.CheckBox rpsecTestingChk;
         private System.Windows.Forms.TabPage modelPage;
@@ -274,14 +298,16 @@
         private System.Windows.Forms.Label rspecDescLbl;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.Label capybaraDescLbl;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox attributeNameTxt1;
+        private System.Windows.Forms.ComboBox attrTypeBox0;
+        private System.Windows.Forms.TextBox attributeNameTxt0;
         private System.Windows.Forms.Label attributesLbl1;
         private System.Windows.Forms.Label modelNameLbl1;
-        private System.Windows.Forms.TextBox modelNameTxt1;
+        private System.Windows.Forms.TextBox modelNameTxt0;
         private System.Windows.Forms.TabPage controllerPage;
         private System.Windows.Forms.Label controllerLabel1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox controllerBox0;
         private System.Windows.Forms.Button generateBtn;
+        private System.Windows.Forms.Button controllerGenerateBtn;
+        private System.Windows.Forms.Button modelGenerateBtn;
     }
 }

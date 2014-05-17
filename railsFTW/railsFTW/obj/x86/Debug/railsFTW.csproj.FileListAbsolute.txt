@@ -6,3 +6,12 @@ C:\Teza\railsFTW\railsFTW\railsFTW\obj\x86\Debug\railsFTW.SettingUpTheProjectFrm
 C:\Teza\railsFTW\railsFTW\railsFTW\obj\x86\Debug\railsFTW.csproj.GenerateResource.Cache
 C:\Teza\railsFTW\railsFTW\railsFTW\obj\x86\Debug\railsFTW.exe
 C:\Teza\railsFTW\railsFTW\railsFTW\obj\x86\Debug\railsFTW.pdb
+C:\Users\whoop\Documents\GitHub\railsFTW\railsFTW\railsFTW\obj\x86\Debug\railsFTW.exe
+C:\Users\whoop\Documents\GitHub\railsFTW\railsFTW\railsFTW\obj\x86\Debug\railsFTW.pdb
+C:\Users\whoop\Documents\GitHub\railsFTW\railsFTW\railsFTW\bin\Debug\railsFTW.exe
+C:\Users\whoop\Documents\GitHub\railsFTW\railsFTW\railsFTW\bin\Debug\railsFTW.pdb
+C:\Users\whoop\Documents\GitHub\railsFTW\railsFTW\railsFTW\obj\x86\Debug\railsFTW.csprojResolveAssemblyReference.cache
+C:\Users\whoop\Documents\GitHub\railsFTW\railsFTW\railsFTW\obj\x86\Debug\railsFTW.welcomeScreenFrm.resources
+C:\Users\whoop\Documents\GitHub\railsFTW\railsFTW\railsFTW\obj\x86\Debug\railsFTW.Properties.Resources.resources
+C:\Users\whoop\Documents\GitHub\railsFTW\railsFTW\railsFTW\obj\x86\Debug\railsFTW.SettingUpTheProjectFrm.resources
+C:\Users\whoop\Documents\GitHub\railsFTW\railsFTW\railsFTW\obj\x86\Debug\railsFTW.csproj.GenerateResource.Cache
