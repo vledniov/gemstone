@@ -11,6 +11,7 @@ namespace railsFTW
         private static Boolean RSPEC;
         private static Boolean CAPYBARA;
         private static List<String> MODELS = new List<String>();
+        private static List<String> CONTROLLERS = new List<String>();
 
         public static void setDirectory(String dir)
         {
@@ -35,6 +36,21 @@ namespace railsFTW
         public static void addModel(String name, String attribute, String type)
         {
             MODELS.Add(name + " " + attribute + ":" + type);
+        }
+
+        public static void addController(String name)
+        {
+            CONTROLLERS.Add(name);
+        }
+
+        public static String[] getModels()
+        {
+            return MODELS.ToArray();
+        }
+
+        public static String[] getControllers()
+        {
+            return CONTROLLERS.ToArray();
         }
     }
 }

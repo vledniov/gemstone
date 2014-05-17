@@ -22,7 +22,24 @@ namespace railsFTW
 
         private void generateBtn_Click(object sender, EventArgs e)
         {
-        
+            foreach (Control c in modelPage.Controls)
+            {
+                if (System.Text.RegularExpressions.Regex.IsMatch(c.Name, "modelNameTxt"))
+                {
+                    char number = c.Name[c.Name.Length-1];
+                    String attribute = modelPage.Controls["attributeNameTxt" + number].Text;
+                    String type = modelPage.Controls["attrTypeBox" + number].Text;
+                    Globals.addModel(c.Text, attribute, type);
+                }
+            }
+            foreach (Control c in controllerPage.Controls)
+            {
+                if (c is TextBox)
+                {
+                    Globals.addController(c.Text);
+                }
+            }
+            char hui;
         }
 
         private void rpsecTestingChk_CheckedChanged(object sender, EventArgs e)
@@ -67,7 +84,8 @@ namespace railsFTW
             TextBox attributes = new TextBox();
             ComboBox attrType  = new ComboBox();
 
-            modelName.Name     = "modelNameTxt" + MODEL_COUNTER++;
+            MODEL_COUNTER++;
+            modelName.Name     = "modelNameTxt" + MODEL_COUNTER;
             modelName.Location = new System.Drawing.Point(10, 50 + (30 * MODEL_COUNTER));
             modelName.Size     = new System.Drawing.Size(152, 25);
 
