@@ -10,6 +10,7 @@ namespace railsFTW
         private static String  PROJECT_DIR = "";
         private static Boolean RSPEC;
         private static Boolean CAPYBARA;
+        private static List<String> MODELS = new List<String>();
 
         public static void setDirectory(String dir)
         {
@@ -30,5 +31,11 @@ namespace railsFTW
         {
             CAPYBARA = val;
         }
+
+        public static void addModel(String name, String attribute, String type)
+        {
+            MODELS.Add(name + " " + attribute + ":" + type);
+        }
     }
 }
+

@@ -81,14 +81,14 @@ namespace railsFTW
             attrType.Location      = new System.Drawing.Point(309, 50 + (30 * MODEL_COUNTER));
             attrType.Size          = new System.Drawing.Size(95, 25);
 
-            mainTabControl.TabPages["modelPage"].Controls.Add(modelName);
-            mainTabControl.TabPages["modelPage"].Controls.Add(attributes);
-            mainTabControl.TabPages["modelPage"].Controls.Add(attrType);
+            modelPage.Controls.Add(modelName);
+            modelPage.Controls.Add(attributes);
+            modelPage.Controls.Add(attrType);
         }
 
         private ComboBox originalBox()
         {
-            return (ComboBox)mainTabControl.TabPages["modelPage"].Controls.Find("attrTypeBox0", false)[0];
+            return (ComboBox) modelPage.Controls.Find("attrTypeBox0", false)[0];
         }
     }
 }
