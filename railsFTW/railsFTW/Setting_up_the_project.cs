@@ -39,7 +39,7 @@ namespace railsFTW
                     Globals.addController(c.Text);
                 }
             }
-            char hui;
+            Command.createProject();
         }
 
         private void rpsecTestingChk_CheckedChanged(object sender, EventArgs e)
