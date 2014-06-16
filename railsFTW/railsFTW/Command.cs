@@ -12,6 +12,14 @@ namespace railsFTW
         public static void createProject()
         {
             create_bat_file();
+            System.Diagnostics.ProcessStartInfo procStartInfo = new System.Diagnostics.ProcessStartInfo("cmd", "/k C:\\project.bat");
+            procStartInfo.CreateNoWindow = false;
+            procStartInfo.RedirectStandardOutput = false;
+            procStartInfo.RedirectStandardError = false;
+            procStartInfo.UseShellExecute = true;
+
+            Process process = Process.Start(procStartInfo);
+            process.WaitForExit();
         }
 
         private static void create_bat_file()
@@ -19,26 +27,28 @@ namespace railsFTW
             FileStream fs   = new FileStream("C:\\project.bat", FileMode.Create);
             StreamWriter sw = new StreamWriter(fs);
             sw.WriteLine(@"cd " + Globals.getDirectory());
-            sw.WriteLine(@"rails new . --skip-bundle");
+            sw.WriteLine(@"call rails new . --skip-bundle");
             if (Globals.getRspec())
             {
                 if (Globals.getCapybara())
                 {
-                    sw.WriteLine(@"rake rails:template LOCATION=C:\\templates\rspec.rb FEATURE=true");
+                    sw.WriteLine(@"call rake rails:template LOCATION=C:\\templates\rspec.rb FEATURE=true");
                 }
                 else
                 {
-                    sw.WriteLine(@"rake rails:template LOCATION=C:\\templates\rspec.rb");
+                    sw.WriteLine(@"call rake rails:template LOCATION=C:\\templates\rspec.rb");
                 }
             }
             foreach (String model in Globals.getModels())
             {
-                sw.WriteLine(@"rails g model" + model);
+                sw.WriteLine(@"call rails generate model " + model);
             }
+            sw.WriteLine(@"call rake db:migrate");
             foreach (String controller in Globals.getControllers())
             {
-                sw.WriteLine(@"rails g controller" + controller);
+                sw.WriteLine(@"call rails generate controller " + controller);
             }
+            sw.WriteLine(@"call rails server");
             sw.Close();
             fs.Close();
         }
